@@ -18,5 +18,7 @@ Route::get('/', function()
 
 Route::api(['version' =>'v1','prefix' => 'api/v1'],function()
 {
+    Route::put('restore','ContactsController@restore');
+    Route::delete('archive','ContactsController@archive');
     Route::resource('contacts','ContactsController');
 });
