@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return Redirect::to('api/v1/contacts');
+});
+
+Route::api(['version' =>'v1','prefix' => 'api/v1'],function()
+{
+    Route::resource('contacts','ContactsController');
 });
