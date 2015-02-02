@@ -16,6 +16,7 @@ class ContactsController extends \BaseController{
 	public function index()
 	{
 		//
+
         $max = Input::get('max') ? : 5;
         $contacts = contact::paginate($max);
         return $this->response->paginator($contacts, new ContactsTransformer);
@@ -40,6 +41,7 @@ class ContactsController extends \BaseController{
 	 */
 	public function store()
 	{
+
 
         $rules = array(
             'first_name'     => 'required',
@@ -126,14 +128,14 @@ class ContactsController extends \BaseController{
 
         if(!$validator->fails())
         {
-            return $this->response->errorNotFound('Contact does not exist.Please Check your Request and Try again.');
+            return $this->response->errorBadRequest('Validation failed please check all your inputs');
         }
 
         $contact->first_name = Input::get('first_name');
         $contact->last_name = Input::get('last_name');
         $contact->email = Input::get('email');
         $contact->address = Input::get('address');
-        $contact->twitter = Input::get('twitter');
+        //$contact->twitter = Input::get('twitter');
         $contact->save();
 
 	}
@@ -188,8 +190,7 @@ class ContactsController extends \BaseController{
     public function restore($id)
     {
 
-        //
-        $contact = contact::find($id);
+        $contact = contact::withTrashed()->find($id);
 
         if(!$contact)
         {

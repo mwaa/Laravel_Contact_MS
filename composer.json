@@ -9,10 +9,10 @@
 		"dingo/api": "0.8.2",
 		"lucadegasperi/oauth2-server-laravel": "3.*@dev",
 		"cartalyst/sentry": "2.1.*"
-		
 	},
     "require-dev": {
-        "fzaninotto/faker": "1.4.*"
+        "fzaninotto/faker": "1.4.*",
+        "phpunit/phpunit": "4.4.*"
     },
 	"autoload": {
 		"classmap": [

@@ -18,7 +18,9 @@ Route::get('/', function()
 
 Route::api(['version' =>'v1','prefix' => 'api/v1'],function()
 {
-    Route::put('restore','ContactsController@restore');
-    Route::delete('archive','ContactsController@archive');
+    Route::put('restore/{id}','ContactsController@restore');
+    Route::delete('archive/{id}','ContactsController@archive');
     Route::resource('contacts','ContactsController');
 });
+
+Route::post('oauth/access_token', 'OAuthController@postAccessToken');
