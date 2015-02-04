@@ -1,25 +1,23 @@
-## Laravel PHP Framework
+## Laravel Basic Contact Api
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+A basic Api application built to manage contacts. It is developed using Laravel php development framework.
+Uses the following packages 
+o	dingo/api
+o	lucadegasperi/oauth2-server-laravel
+o	cartalyst/sentry
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+The api has all functions to create, save, edit and delete a new record.
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+## Preview on Functionality
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+A working version of the Contact Api is available for preview [at] http://mwaa-lcms.heroku.com
+The site works by redirecting to contacts Api. To be able to see the full functionality please use getpostman to make get,post and put requests.
 
-## Official Documentation
+### Tests Contact Api
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+There are a couple of tests in the development of the Api to check that its operational functions. The series of test performed ensure that the Contacts Api is fully functional as intended.
 
-### Contributing To Laravel
+### To Be Done
+Oauth2 Authentication
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
-
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+Currently Contacts Api uses Basic Laravel Authentication. Work on integration of Ouath2 is in progress.
