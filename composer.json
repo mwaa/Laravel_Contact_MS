@@ -12,7 +12,9 @@
 	},
     "require-dev": {
         "fzaninotto/faker": "1.4.*",
-        "phpunit/phpunit": "4.4.*"
+        "phpunit/phpunit": "4.4.*",
+		"mockery/mockery": "0.9.*@dev"
+		
     },
 	"autoload": {
 		"classmap": [
@@ -21,7 +23,8 @@
 			"app/models",
 			"app/database/migrations",
 			"app/database/seeds",
-			"app/tests/TestCase.php"
+			"app/tests/TestCase.php",
+            "app/tests/helpers"
 		],
         "psr-4": {
             "lcms\\": "app/lcms"

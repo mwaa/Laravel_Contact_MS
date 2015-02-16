@@ -104,7 +104,9 @@ return [
     'auth' => [
         'basic' => function ($app) {
             return new Dingo\Api\Auth\BasicProvider($app['auth']);
-        },
+        }
+        /*
+         * ,
         'oauth' => function ($app) {
             $provider = new Dingo\Api\Auth\LeagueOAuth2Provider($app['oauth2-server.authorizer']->getChecker());
 
@@ -115,6 +117,7 @@ return [
 
             return $provider;
         }
+         */
     ],
 
     /*

@@ -16,7 +16,6 @@ class ContactsController extends \BaseController{
 	public function index()
 	{
 		//
-
         $max = Input::get('max') ? : 5;
         $contacts = contact::paginate($max);
         return $this->response->paginator($contacts, new ContactsTransformer);
